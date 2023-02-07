@@ -1,6 +1,8 @@
+import { Layout } from "../../components"
+
 const Dashboard = () => {
     return (
-        <div>Dashboard</div>
+        <Layout>Dashboard</Layout>
     )
 }
 

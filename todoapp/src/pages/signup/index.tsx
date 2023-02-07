@@ -1,7 +1,11 @@
-const Signup = () => {
-    return (
-        <div>Signup</div>
-    )
-}
+import { Layout, SignUpForm } from "../../components";
 
-export { Signup }
+const Signup = () => {
+  return (
+    <Layout>
+      <SignUpForm />
+    </Layout>
+  );
+};
+
+export { Signup };

@@ -1,16 +1,20 @@
+import { FC, ReactNode } from "react";
 import { Aside } from "../Aside";
 import { Header } from "../Header";
 import { Main } from "../Main";
 import { Footer } from "../Footer";
 
-const Layout = () => {
+type Props = {
+  children: ReactNode;
+};
+
+const Layout: FC<Props> = ({ children }) => {
   return (
     <>
-      Layout
       <Header />
-      <div className="d-flexflex-grow-1">
+      <div className="d-flex flex-grow-1">
         <Aside />
-        <Main />
+        <Main>{children}</Main>
       </div>
       <Footer />
     </>

@@ -1,13 +1,7 @@
-import { Layout } from "../../components"
-
+import { Layout } from "../../components";
 
 const Login = () => {
-    return (
+  return <Layout>Login</Layout>;
+};
 
-        <>Login
-        <Layout />
-        </>
-    )
-}
-
-export { Login }
+export { Login };

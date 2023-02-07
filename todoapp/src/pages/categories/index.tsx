@@ -1,6 +1,8 @@
+import { Layout } from "../../components"
+
 const Categories = () => {
     return (
-        <div>Categories</div>
+        <Layout>Categories</Layout>
     )
 }
 
