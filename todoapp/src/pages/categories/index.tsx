@@ -1,8 +1,13 @@
 import { Layout } from "../../components"
+import { AddCategory } from "../../components/forms/AddCategory"
 
 const Categories = () => {
     return (
-        <Layout>Categories</Layout>
+        <>
+        <Layout>
+            <AddCategory />
+        </Layout>
+        </>
     )
 }
 

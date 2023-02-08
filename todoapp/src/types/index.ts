@@ -7,11 +7,16 @@ export type User = {
   bithdate: Date;
 };
 
+ //creo un type para trer lo estado para el formulario
+export type SignUpForm = Omit<User, "id">;
+
 export type Category = {
   id: string;
   name: string;
   color: string
 };
+
+export type AddCategoryForm = Omit<Category, "id">;
 
 export type Task = {
   id: string;
@@ -21,3 +26,5 @@ export type Task = {
   description: string;
   status: string;
 };
+
+export type AddTaskForm = Omit<Task, "id">;

@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Outlet, Link } from "react-router-dom";
-import { Categories, Dashboard, Login, Signup, Users } from "./pages";
+import { Categories, Dashboard, Login, Signup, Tasks, Users } from "./pages";
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
         <Route path="/categories" element={<Categories />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/users" element={<Users />} />
+        <Route path="/tasks" element={<Tasks />} />
       </Routes>
     </BrowserRouter>
   );
