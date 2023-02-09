@@ -1,4 +1,5 @@
-import { AddCategoryForm } from "../types";
+import { mapToArray } from "../helpers/mapToArray";
+import { AddCategoryForm, Category } from "../types";
 import { api } from "../utils/axios";
 
 const add = async (category: AddCategoryForm) => {
@@ -12,7 +13,7 @@ const getAll = async () => {
   const response = await api.get("/categories.json");
 
   //   console.log(response)
-  return response.data;
+  return mapToArray<Category>(response.data);
 };
 
 export const serviceCategories = { add, getAll };

@@ -3,4 +3,4 @@ export { Dashboard } from "./dashboard";
 export { Login } from "./login";
 export { Signup } from "./signup";
 export { Users } from "./users";
-export { Tasks } from "./tasks";
+export { Task } from "./add-task";

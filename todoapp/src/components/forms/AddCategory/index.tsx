@@ -2,7 +2,6 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { api } from "../../../utils/axios";
 import { serviceCategories } from "../../../services/categories";
 
 import { useForm } from "react-hook-form";

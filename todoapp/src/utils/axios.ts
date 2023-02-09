@@ -9,5 +9,5 @@ const api = axios.create({
 
 export { api };
 
-api.post("/users.json");
-api.post("/addCategory.json")
+// api.post("/users.json");
+// api.post("/addCategory.json")
