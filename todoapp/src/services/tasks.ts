@@ -1,8 +1,8 @@
 import { AddTaskForm } from "../types";
 import { api } from "../utils/axios";
 
-const add = async (category: AddTaskForm) => {
-  const response = await api.post("/tasks.json", category);
+const add = async (task: AddTaskForm) => {
+  const response = await api.post("/tasks.json", task);
 
   //   console.log(response)
   return response.data;

@@ -27,4 +27,6 @@ export type Task = {
   status: string;
 };
 
-export type AddTaskForm = Omit<Task, "id">;
+// export type AddTaskForm = Omit<Task, "id">;
+
+export type AddTaskForm = Omit<Task, "id" | "category" | "date"> & { category: string, date: string };
