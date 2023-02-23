@@ -4,11 +4,13 @@ export type User = {
   lastname: string;
   email: string;
   password: string;
-  bithdate: Date;
+  birthdate: Date;
 };
 
  //creo un type para trer lo estado para el formulario
-export type SignUpForm = Omit<User, "id">;
+export type SignUpForm = Omit<User, "id" | 'birthdate'> & { birthdate: Date};
+export type SignUpPayload = SignUpForm
+
 
 export type Category = {
   id: string;
@@ -17,6 +19,7 @@ export type Category = {
 };
 
 export type AddCategoryForm = Omit<Category, "id">;
+export type AddCategoryPayload = AddCategoryForm
 
 export type Task = {
   id: string;
@@ -30,3 +33,4 @@ export type Task = {
 // export type AddTaskForm = Omit<Task, "id">;
 
 export type AddTaskForm = Omit<Task, "id" | "category" | "date"> & { category: string, date: string };
+export type AddTaskPayload = Omit<Task, 'id'>

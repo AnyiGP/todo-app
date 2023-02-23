@@ -12,7 +12,10 @@ const SignUp = () => {
   const { register, handleSubmit } = useForm<SignUpForm>();
 
   const onSubmit = (data: SignUpForm) => {
-    serviceUsers.add(data);
+    serviceUsers.add({
+      ...data, 
+      birthdate: new Date(data.birthdate)
+    });
   };
 
   return (
@@ -50,7 +53,7 @@ const SignUp = () => {
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formBirthday">
           <Form.Label>Fecha de Nacimiento</Form.Label>
-          <Form.Control type="date" {...register("bithdate")} />
+          <Form.Control type="date" {...register("birthdate")} />
         </Form.Group>
       </Row>
 

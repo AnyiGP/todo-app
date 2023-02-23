@@ -19,7 +19,12 @@ const AddTask = () => {
   }, []);
 
   const onSubmit = (data: AddTaskForm) => {
-    serviceTasks.add(data);
+    serviceTasks.add({
+      ...data,
+      date: new Date(data.date),
+      category: categories.find(cat => cat.id === data.category) as Category}
+    )
+
   };
 
   //falta limpiar el formulario una vez enviada la data
