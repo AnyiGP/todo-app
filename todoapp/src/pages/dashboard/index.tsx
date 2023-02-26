@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import { Layout, Task } from "../../components";
 import { serviceTasks } from "../../services/tasks";
 import { Task as TaskType } from "../../types";
@@ -31,9 +32,15 @@ const Dashboard = () => {
         ))}
       </ul> */}
 
-      {tasks.map((task) => (
-        <Task {...task} />
-      ))}
+      <Container fluid>
+        <Row>
+          {tasks.map((task) => (
+            <Col key={task.id}>
+              <Task {...task} />
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </Layout>
   );
 };
