@@ -3,9 +3,11 @@ import { Aside } from "../Aside";
 import { Header } from "../Header";
 import { Main } from "../Main";
 import { Footer } from "../Footer";
+import { Task } from "../../../types";
 
 type Props = {
   children: ReactNode;
+  
 };
 
 const Layout: FC<Props> = ({ children }) => {

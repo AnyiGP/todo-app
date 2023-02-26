@@ -1,7 +1,6 @@
 import { mapToArray } from "../helpers/mapToArray";
 import { AddCategoryForm, AddCategoryPayload, Category } from "../types";
 import { api } from "../utils/axios";
-
 const add = async (category: AddCategoryPayload) => {
   const response = await api.post("/categories.json", category);
 
